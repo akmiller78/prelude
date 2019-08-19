@@ -19,3 +19,7 @@
 
 ;; enable rainbow parens for clojure
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+
+(setq auto-save-default nil)
+(setq prelude-auto-save nil)
+(super-save-stop)
