@@ -12,7 +12,14 @@
 (prelude-require-packages '(aggressive-indent dracula-theme))
 
 ;; enable agressive indent for clojure
-(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+;;(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+
+;; add jsx
+(prelude-require-packages '(rjsx-mode))
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+
+;; include clj-refactor
+(prelude-require-packages '(clj-refactor))
 
 ;; enable smartparens for clojure
 (add-hook 'clojure-mode-hook #'smartparens-strict-mode)
